@@ -1,0 +1,15 @@
+@use "global/import" as *;
+
+.l-main {
+  & {
+    
+  }
+
+  @include pc {
+    padding-top: 10rem;
+  }
+
+  @include sp {
+    padding-top: 8rem;
+  }
+}

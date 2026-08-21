@@ -1,0 +1,51 @@
+@use "global/import" as *;
+
+.c-ttl {
+  & {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-bottom: solid 1px color(gry,base);
+
+    &__en {
+      font-family: $ff-oswald;
+      color: color(gld,base);
+      font-weight: $base-font-bold;
+      letter-spacing: .03em;
+      @include text-trim;
+    }
+
+    &__ja {
+      font-weight: $base-font-bold;
+    }
+  }
+
+  @include pc {
+    gap: 1.2rem;
+    margin-bottom: 4rem;
+    padding-bottom: 2.4rem;
+
+    &__en {
+      font-size: 5.6rem;
+    }
+
+    &__ja {
+      font-size: 2rem;
+    }
+  }
+
+  @include sp {
+    gap: .8rem;
+    margin-bottom: 2.4rem;
+    padding-bottom: 1.6rem;
+
+    &__en {
+      font-size: 3.6rem;
+    }
+
+    &__ja {
+      font-size: 1.4rem;
+    }
+  }
+}

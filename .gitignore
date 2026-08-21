@@ -1,0 +1,27 @@
+# Node artifact files
+node_modules/
+
+# ビルド先は追跡しない
+dist/
+
+# OSが生成する不要ファイル
+.DS_Store
+Thumbs.db
+
+# アプリケーションファイル（ビルド済みなど）
+*.app
+*.exe
+*.war
+
+# 大きなメディアファイル（必要なら）
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+
+# IDEやエディタ設定
+.vscode/
+
+# NetBeans プロジェクト設定（使用していなければ削除してOK）
+nbproject/

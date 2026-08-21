@@ -1,0 +1,62 @@
+@use "global/import" as *;
+
+// // ▼アドビフォント_チラつき防止
+// html {
+//   visibility: hidden;
+//   /* ▼スクロールバーを無効化 (Firefox) */
+//   scrollbar-width: none;
+//   /* ▲スクロールバーを無効化 (Firefox) */
+// }
+
+// html.wf-active {
+//   visibility: visible;
+// }
+// // ▲アドビフォント_チラつき防止
+
+html {
+  font-size:62.5%;
+}
+
+@include pc {
+  html {
+    font-size: calc(10 * (100vw / 1920));
+  }
+
+  a[href^="tel:"] {
+    pointer-events: none;
+  }
+}
+
+@include sp {
+  html {
+    font-size: calc(10 * (100vw / 390));
+  }
+}
+
+body {
+  color: $base-font-color;
+  font-family: $ff-noto-sans-jp;
+  font-style: normal;
+  font-optical-sizing: auto;
+  background-color: $base-bg-color;
+
+  &.is-active {
+    overflow: hidden;
+  }
+}
+
+.pc {
+  display: block !important;
+
+  @include sp {
+    display: none !important;
+  }
+}
+
+.sp {
+  display: none !important;
+
+  @include sp {
+    display: block !important;
+  }
+}

@@ -1,0 +1,486 @@
+/*! destyle.css v4.0.1 | MIT License | https://github.com/nicolas-cusan/destyle.css */
+
+/* ボックスモデルのリセット
+============================================ */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+}
+
+/* Document
+============================================ */
+
+/**
+ * 1. すべてのブラウザで行の高さを修正。
+ * 2. iOSで方向変更後のフォントサイズの調整を禁止
+ * 3. iOSのリンク上の灰色のオーバーレイを削除
+ */
+
+html {
+  line-height: 1.15; // 1
+  -webkit-text-size-adjust: 100%; // 2
+  text-size-adjust: 100%; // 2
+  -webkit-tap-highlight-color: transparent; // 3
+}
+
+/* Sections
+ ============================================ */
+
+/**
+ * すべてのブラウザでマージンを削除
+ */
+
+body {
+  margin: 0;
+	line-break: strict; // 禁則処理
+  overflow-wrap: anywhere; // 要素内に収まらない場合、適切な折返し位置がなければ単語の途中で改行
+}
+
+/**
+ * IEで一貫して「main」要素をレンダリング
+ */
+
+main {
+  display: block;
+}
+
+/* マージンリセット
+ ============================================ */
+
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
+}
+
+/* 見出し
+ ============================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* リスト
+ ============================================ */
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* 定義リスト
+ ============================================ */
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+/* Grouping content
+ ============================================ */
+
+/**
+ * 1. Firefoxで正しいボックスサイズを追加
+ * 2. EdgeとIEでオーバーフローを表示
+ */
+
+hr {
+  box-sizing: content-box; // 1
+  height: 0; // 1
+  margin: 0;
+  overflow: visible; // 2
+  clear: both;
+  color: inherit;
+  border-top-width: 1px;
+}
+
+/**
+ * 1. すべてのブラウザでフォントサイズの継承と拡大縮小を修正
+ * 2. すべてのブラウザーで`em`のフォントサイズが変なのを修正
+ */
+
+pre {
+  font-family: monospace, monospace; // 1
+  font-size: inherit; // 2
+}
+
+address {
+  font-style: inherit;
+}
+
+blockquote,
+q {
+	quotes: none;
+
+  &::before,
+  &::after {
+    content: none;
+  }
+}
+
+/* テキストレベルの設定
+ ============================================ */
+
+/**
+ * IE10でアクティブリンクの灰色背景を削除
+ */
+
+a {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/**
+ * 1. Chrome 57-で下部のボーダーを削除
+ * 2. Chrome、Edge、IE、Opera、Safariで正しいテキスト装飾を追加
+ */
+
+abbr[title] {
+  text-decoration: underline dotted; // 2
+}
+
+/**
+ * Chrome、Edge、Safariで正しいフォントウェイトを追加
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. すべてのブラウザでフォントサイズの継承と拡大縮小を修正
+ * 2. すべてのブラウザーで`em`のフォントサイズが変なのを修正
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; // 1
+  font-size: inherit; // 2
+}
+
+/**
+ * すべてのブラウザで正しいフォントサイズを追加
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * すべてのブラウザで `sub` と `sup` 要素が行の高さに影響しないようにする。
+ */
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/**
+ * フォントスタイルリセット
+ */
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+	font-style: normal;
+	font-weight: inherit;
+}
+
+/* 置換要素
+ ============================================ */
+
+/**
+ * vertical-alignの差異を防ぐ
+ */
+
+svg,
+img,
+embed,
+object,
+iframe {
+  vertical-align: bottom;
+}
+
+img,
+abbr,
+acronym {
+	border: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  backface-visibility: hidden;
+}
+
+a img {
+	border: 0;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+/* Forms
+ ============================================ */
+
+/**
+ * フォームフィールドをリセットして、スタイル設定できるようにする
+ * 1. iOSは特に、システム間でフォーム要素をスタイリング可能にする
+ * 2. 親要素から text-transform を継承する
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-transform: inherit; // 2
+  vertical-align: middle;
+  -webkit-appearance: none; // 1
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+:focus:not(:focus-visible) {
+  outline: 0; // キーボード操作"以外"でフォーカスされた際はoutlineを消す
+}
+
+/**
+ * クリック可能な要素のカーソルを修正
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+}
+
+button:disabled,
+[type="button"]:disabled,
+[type="reset"]:disabled,
+[type="submit"]:disabled {
+  cursor: default;
+}
+
+/**
+ * Firefoxのアウトラインを改善し、入力要素とボタンのスタイルを統一
+ */
+
+:-moz-focusring {
+  outline: auto;
+}
+
+select:disabled {
+  opacity: inherit;
+}
+
+/**
+ * paddingを取り除く
+ */
+
+option {
+  padding: 0;
+}
+
+/**
+ * 不可視にリセット
+ */
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+	border: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+/**
+ * Chrome、Firefox、Operaで正しいvertical-alignを追加する
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * IE 10+のデフォルトの垂直スクロールバーを削除
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Chromeのインクリメントボタンとデクリメントボタンのカーソルスタイルを修正
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Safariのアウトラインスタイルを修正
+ */
+
+[type="search"] {
+  outline-offset: -2px;
+}
+
+/**
+ * macOSのChromeとSafariで内側のパディングを削除
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. iOSとSafariでクリッカブルタイプのスタイル設定ができない問題を修正
+ * 2. フォントの継承を修正
+ */
+
+::-webkit-file-upload-button {
+  font: inherit; // 2
+  -webkit-appearance: button; // 1
+}
+
+/**
+ * Firefoxの外観を修正
+ */
+[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/**
+ * クリック可能なラベル
+ */
+
+label {
+  cursor: pointer;
+}
+
+/* Interactive
+ ============================================ */
+
+/*
+ * Edge、IE 10+、Firefoxで正しく表示されるようにする
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * すべてのブラウザで正しく表示されるようにする
+ */
+
+summary {
+  display: list-item;
+	list-style: none;
+	cursor: pointer;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
+/*
+ * 編集可能なコンテンツのアウトラインを削除
+ */
+
+[contenteditable]:focus {
+  outline: auto;
+}
+
+/* テーブル
+ ============================================ */
+
+/**
+1. すべてのChromeとSafariで、テーブルのボーダー色の継承を修正
+*/
+
+table {
+  font-size: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-color: inherit; // 1
+}
+
+caption {
+  text-align: left;
+}
+
+td,
+th {
+  padding: 0;
+  vertical-align: top;
+}
+
+th {
+  font-weight: bold;
+  text-align: left;
+}
+
+/* ========================================== */

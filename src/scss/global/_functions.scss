@@ -1,0 +1,52 @@
+@use "sass:math";
+@use "sass:meta";
+@use "global/variables" as *;
+
+// px → vw（PC基準）
+@function vwp($px, $max: true) {
+  @if $max ==true {
+
+    @if $px < 0 {
+      @return max(#{round($px)+px}, #{calc($px/$vp-pc*100 * var(--vw))});
+    }
+
+    @else {
+      @return min(#{round($px)+px}, #{calc($px/$vp-pc*100 * var(--vw))});
+    }
+  }
+
+  @else {
+    @return calc($px/$vp-pc*100 * var(--vw));
+  }
+}
+
+// px → vw（SP基準）
+@function vws($px, $max: true) {
+  @return calc($px/$vp-sp*100 * var(--vw));
+}
+
+// px → vw（PC基準）
+@function vw($px, $base: $vp-pc) {
+  // 単位なし数値を想定
+  @if meta.type-of($px) != 'number' or math.is-unitless($px) == false {
+    @warn 'vw()の引数は単位なしの数値(px値)を指定してください';
+    @return $px;
+  }
+
+  @return math.div($px, $base) * 100vw;
+}
+
+// px → vw（SP基準）
+@function vw-sp($px) {
+  @return vw($px, $vp-sp);
+}
+
+// ヘッダーの実測高さを返す（headerHeightUtils.jsがJSで計測し--header-heightにセットした値）
+@function header-height() {
+  @return var(--header-height);
+}
+
+// フッターの実測高さを返す（footerHeightUtils.jsがJSで計測し--footer-heightにセットした値）
+@function footer-height() {
+  @return var(--footer-height);
+}

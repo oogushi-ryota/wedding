@@ -1,0 +1,25 @@
+@use "global/import" as *;
+
+.c-inner {
+  & {
+    margin-inline: auto;
+  }
+
+  @include pc {
+    width: 148rem;
+    padding: 0 2rem;
+
+    &--128 {
+      width: 132rem;
+    }
+
+    &--102 {
+      width: 106rem;
+    }
+  }
+
+  @include sp {
+    width: 100%;
+    padding: 0 2rem;
+  }
+}

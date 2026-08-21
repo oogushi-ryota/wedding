@@ -1,0 +1,15 @@
+@use "./global/import" as *;
+
+.p-top {
+  & {
+    
+  }
+
+  @include pc {
+    padding-bottom: 12rem;
+  }
+
+  @include sp {
+    padding-bottom: 8rem;
+  }
+}

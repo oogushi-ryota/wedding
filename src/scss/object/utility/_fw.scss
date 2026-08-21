@@ -1,0 +1,7 @@
+@use "./global/import" as *;
+
+.u-fw {
+  &--bold {
+    font-weight: $base-font-bold;
+  }
+}

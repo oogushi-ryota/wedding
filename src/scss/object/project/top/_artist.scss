@@ -1,0 +1,27 @@
+@use "./global/import" as *;
+
+.p-top-artist {
+  & {
+    &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @include pc {
+    margin-top: 12rem;
+
+    &__btn {
+      margin-top: 4rem;
+    }
+  }
+
+  @include sp {
+    margin-top: 8rem;
+
+    &__btn {
+      margin-top: 4rem;
+    }
+  }
+}

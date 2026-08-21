@@ -1,0 +1,48 @@
+// ===================================
+// Foundation
+// ===================================
+@use "foundation/base" as *;
+@use "foundation/reset" as *;
+@use "foundation/animation" as *;
+
+// ===================================
+// Layout
+// ===================================
+@use "layout/header" as *;
+@use "layout/footer" as *;
+@use "layout/main" as *;
+
+// ===================================
+// Component
+// ===================================
+@use "object/component/inner" as *;
+@use "object/component/ttl" as *;
+
+@use "object/component/top-secttl" as *;
+@use "object/component/btn" as *;
+
+// ===================================
+// Project
+// ===================================
+// トップページ
+@use "object/project/top/index" as *;
+@use "object/project/top/appeal" as *;
+@use "object/project/top/fv" as *;
+@use "object/project/top/artist" as *;
+@use "object/project/top/talent" as *;
+
+// ===================================
+// Utility
+// ===================================
+@use "object/utility/fw" as *;
+
+// ===================================
+// State
+// ===================================
+@use "state/is" as *;
+
+// ===================================
+// vendor
+// ===================================
+@use "vendor/swiper" as *;
+@use "vendor/slick" as *;
