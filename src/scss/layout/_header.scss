@@ -2,168 +2,109 @@
 
 .l-header {
   & {
-    width: 100%;
-    background-color: color(wt,base);
-    border-bottom: solid 1px $base-font-color;
-    position: fixed;
+    width: 39rem;
     top: 0;
     left: 0;
     z-index: 9999;
-
-    &__inner {
-      height: 100%;
-    }
 
     &__wrap {
       height: 100%;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
     }
 
-    &__logo-link {
-      display: block;
-    }
-
-    &__logo-img {
-      width: 100%;
-
-      img {
-        width: 100%;
-      }
-    }
-
-    &__nav-link,
-    &__nav-btn {
-      font-family: $ff-oswald;
-      color: $base-font-color;
-      font-weight: $base-font-bold;
-      letter-spacing: .03em;
-      line-height: 100%;
-      display: inline-block;
-      @include text-trim;
-    }
-
-    &__nav-btn {
-      color: color(wt,base);
-      background-color: color(gld,base);
-      border-radius: 100vmax;
-      border: solid 1px color(gld,base);
+    &__hamburger {
+      width: 3.2rem;
+      height: 3.2rem;
+      position: relative;
+      z-index: 9999;
     }
 
     &__hamburger-line {
-      background-color: color(gld,base);
+      width: 2.4rem;
+      height: 2px;
+      background-color: color(brn,base);
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
-      transition: transform .3s ease-out;
-    }
-  }
-
-  @include pc {
-    height: 10rem;
-
-    &__inner {
-      padding: 0 4rem;
-    }
-
-    &__logo-link {
-      width: 21.5rem;
-      @include hover-opacity;
-    }
-
-    &__nav-list {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 5.6rem;
-    }
-
-    &__nav-link {
-      font-size: 2.4rem;
-      @include hover-opacity;
-    }
-
-    &__nav-btn {
-      font-size: 2.4rem;
-      padding: 2rem 8rem;
-      @include hover-btn;
-    }
-
-    &__hamburger {
-      display: none;
-    }
-  }
-
-  @include sp {
-    height: 8rem;
-
-    &__inner {
-      padding: 0 2rem;
-    }
-
-    &__logo {
-      position: relative;
-      z-index: 9999;
-    }
-
-    &__logo-link {
-      width: 16rem;
-    }
-
-    &__nav {
-      width: 100%;
-      height: 100dvh;
-      background-color: color(wt,base);
-      padding: 12rem 2rem 2rem;
-      position: absolute;
-      top: 0;
-      right: 0;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity .3s ease-out;
-    }
-
-    &__nav-link {
-      font-size: 2.4rem;
-    }
-
-    &__nav-item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      & + & {
-        margin-top: 5.6rem;
-      }
-    }
-
-    &__nav-btn {
-      font-size: 2.4rem;
-      padding: 2rem 8rem;
-    }
-
-    &__hamburger {
-      width: 4rem;
-      height: 4rem;
-      position: relative;
-      z-index: 9999;
-    }
-
-    &__hamburger-line {
-      width: 3.2rem;
-      height: .2rem;
+      transition: transform .5s ease-out;
 
       &:nth-of-type(1) {
         top: 25%;
       }
 
+      &:nth-of-type(2) {
+        transition: opacity .5s ease-out;
+      }
+
       &:nth-of-type(3) {
         top: 75%;
       }
+    }
+
+    &__nav {
+      width: 100%;
+      background-color: rgba($color: $base-bg-color, $alpha: .9);
+      padding: 2rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      opacity: 0;
+      transition: opacity .5s ease-out;
+      pointer-events: none;
+    }
+
+    &__nav-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 4rem;
+      height: 100%;
+    }
+
+    &__nav-link {
+      color: color(wt,off);
+      font-size: 2rem;
+      font-weight: $base-font-medium;
+      letter-spacing: .1em;
+      line-height: 100%;
+      @extend %a-hover;
+    }
+  }
+
+  @include pc {
+    position: sticky;
+
+    &__wrap {
+      width: 100%;
+      height: 7.2rem;
+      padding: 2rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    &__nav {
+      height: 85dvh;
+    }
+  }
+
+  @include sp {
+    height: 7.2rem;
+    position: fixed;
+
+    &__inner {
+      height: 100%;
+      padding: 2rem;
+    }
+
+    &__nav {
+      height: 100dvh;
     }
   }
 }

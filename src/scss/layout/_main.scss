@@ -2,14 +2,22 @@
 
 .l-main {
   & {
-    
+    overflow-x: clip;
   }
 
   @include pc {
-    padding-top: 10rem;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__wrap {
+      height: 100%;
+      position: relative;
+    }
   }
 
   @include sp {
-    padding-top: 8rem;
+    
   }
 }

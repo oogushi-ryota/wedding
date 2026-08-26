@@ -2,14 +2,14 @@
 
 .p-top {
   & {
-    
+    padding-bottom: 8rem;
   }
 
   @include pc {
-    padding-bottom: 12rem;
+    
   }
 
   @include sp {
-    padding-bottom: 8rem;
+    
   }
 }

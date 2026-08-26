@@ -1,0 +1,15 @@
+@use "global/import" as *;
+
+.l-body {
+  & {
+    
+  }
+
+  @include pc {
+    
+  }
+
+  @include sp {
+    
+  }
+}

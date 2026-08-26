@@ -2,53 +2,56 @@
 
 .c-btn {
   & {
-    font-family: $ff-oswald;
-    color: color(wt,base);
+    color: color(wt,off);
+    font-size: 2rem;
     font-weight: $base-font-bold;
-    letter-spacing: .03em;
-    background-color: color(gld,base);
+    line-height: 100%;
+    letter-spacing: .1em;
     border-radius: 100vmax;
-    border: solid 1px color(gld,base);
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 31rem;
+    height: 7.2rem;
+    background-color: color(brn,base);
+    border: solid 1px color(brn,base);
+    margin-inline: auto;
     position: relative;
     cursor: pointer;
+    transition: color .3s ease-out, background-color .3s ease-out;
     @include text-trim;
 
     &::after {
       content: ">";
-      font-family: $ff-oswald;
-      color: color(wt,base);
+      color: color(wt,off);
+      font-size: 2rem;
       font-weight: $base-font-bold;
       position: absolute;
       top: 50%;
+      right: 2rem;
       transform:  translateY(-50%);
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
+      transition: color .3s ease-out;
+    }
+
+    @include pc {
+      @include hover {
+        background-color: color(wt,off);
+        color: color(brn,base);
+
+        &::after {
+          color: color(brn,base);
+        }
+      }
     }
   }
 
   @include pc {
-    font-size: 2.4rem;
-    width: 25.4rem;
-    height: 6.4rem;
-    @include hover-btn;
-
-    &::after {
-      font-size: 2.4rem;
-      right: 2rem;
-    }
+    
   }
 
   @include sp {
-    font-size: 1.8rem;
-    width: 26rem;
-    height: 6.4rem;
-
-    &::after {
-      font-size: 2.4rem;
-      right: 2rem;
-    }
+    
   }
 }

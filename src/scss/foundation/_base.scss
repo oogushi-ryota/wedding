@@ -19,7 +19,8 @@ html {
 
 @include pc {
   html {
-    font-size: calc(10 * (100vw / 1920));
+    // 390px時点のサイズ（=10px）で固定し、SPからそれ以上は拡大させない
+    font-size: 10px;
   }
 
   a[href^="tel:"] {
@@ -35,14 +36,20 @@ html {
 
 body {
   color: $base-font-color;
-  font-family: $ff-noto-sans-jp;
+  font-family: $ff-noto-serif-jp;
   font-style: normal;
   font-optical-sizing: auto;
   background-color: $base-bg-color;
+}
 
-  &.is-active {
-    overflow: hidden;
-  }
+// アンカーリンクでのスクロール時、ヘッダー分オフセットする（セクションごとに上書き可）
+section[id] {
+  scroll-margin-top: var(--header-height);
+}
+
+#message,
+#album {
+  scroll-margin-top: 0;
 }
 
 .pc {

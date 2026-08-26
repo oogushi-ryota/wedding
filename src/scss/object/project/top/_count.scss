@@ -1,0 +1,105 @@
+@use "./global/import" as *;
+
+.p-top-count {
+  & {
+    margin-top: 8rem;
+
+    &__inner {
+      padding: 4rem;
+    }
+
+    &__ttl {
+      font-family: $ff-cinzel;
+      font-size: 2.4rem;
+      font-weight: $base-font-regular;
+      letter-spacing: .1em;
+      line-height: 100%;
+      text-align: center;
+    }
+
+    &__countdown {
+      margin-top: 2.4rem;
+    }
+
+    &__countdown-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: .8rem;
+    }
+
+    &__countdown-days,
+    &__countdown-days-txt,
+    &__countdown-item-num,
+    &__countdown-item-txt,
+    &__wedding-lead,
+    &__wedding-time {
+      font-family: $ff-libre-caslon;
+      font-weight: $base-font-regular;
+      line-height: 100%;
+    }
+
+    &__countdown-days {
+      font-size: 5.6rem;
+      letter-spacing: .05em;
+    }
+
+    &__countdown-days-txt {
+      font-size: 2.4rem;
+      padding-bottom: .4rem;
+    }
+
+    &__countdown-body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.6rem;
+      margin-top: 1rem;
+    }
+
+    &__countdown-body-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    &__countdown-item-num {
+      font-size: 3.2rem;
+      letter-spacing: .05em;
+    }
+
+    &__countdown-item-txt {
+      font-size: 1.4rem;
+    }
+
+    &__wedding {
+      margin-top: 2.4rem;
+      padding-top: 2.4rem;
+      border-top: solid 1px $base-font-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &__wedding-lead {
+      font-size: 1.4rem;
+      letter-spacing: .04em;
+    }
+
+    &__wedding-time {
+      font-size: 3.2rem;
+      letter-spacing: .1em;
+    }
+  }
+
+  @include pc {
+    
+  }
+
+  @include sp {
+    
+  }
+}

@@ -1,0 +1,118 @@
+@use "global/import" as *;
+
+.l-pc-cont {
+  & {
+    display: none;
+  }
+
+  @include pc-wide {
+    display: block;
+    width: 54.1rem;
+
+    &__count {
+      border: solid 1px color(brn,base);
+      padding: vwp(40);
+    }
+
+    &__count-head {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: vwp(24);
+    }
+
+    &__name,
+    &__time,
+    &__date {
+      color: color(brn,base);
+      font-weight: $base-font-regular;
+      line-height: 100%;
+    }
+
+    &__name {
+      font-family: $ff-cinzel;
+      font-size: vwp(32);
+      letter-spacing: .05em;
+    }
+
+    &__time {
+      font-family: $ff-libre-caslon;
+      font-size: vwp(56);
+      letter-spacing: .1em;
+    }
+
+    &__date {
+      font-family: $ff-libre-caslon;
+      font-size: vwp(24);
+      letter-spacing: .1em;
+    }
+
+    &__countdown {
+      margin-top: vwp(40);
+      padding-top: vwp(40);
+      border-top: solid 1px color(brn,base);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: vwp(24);
+    }
+
+    &__countdown-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: vwp(8);
+    }
+
+    &__countdown-item-num,
+    &__countdown-item-txt {
+      color: color(brn,base);
+      font-family: $ff-libre-caslon;
+      font-weight: $base-font-regular;
+      line-height: 100%;
+      letter-spacing: .05em;
+    }
+
+    &__countdown-item-num {
+      font-size: vwp(56);
+    }
+
+    &__countdown-item-txt {
+      font-size: vwp(18);
+    }
+
+    &__info {
+      border: solid 1px color(brn,base);
+      margin-top: vwp(20);
+      padding: vwp(40);
+    }
+
+    &__info-txt {
+      color: color(brn,base);
+      font-size: vwp(20);
+      font-weight: $base-font-medium;
+      line-height: 180%;
+      letter-spacing: .05em;
+      text-align: center;
+    }
+
+    &__info-em {
+      font-size: vwp(32);
+      line-height: 150%;
+    }
+
+    &__info-btn {
+      margin-top: vwp(24);
+    }
+  }
+
+  @include pc {
+    
+  }
+
+  @include sp {
+    
+  }
+}

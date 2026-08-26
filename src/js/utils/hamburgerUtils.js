@@ -4,11 +4,12 @@ import $ from "jquery";
 export function initHamburgerMenu({
   navSelector = ".js-nav",
   btnSelector = ".js-nav-btn",
+  bodySelector = ".l-body",
   extraTargets = [],
 } = {}) {
   const $nav = $(navSelector);
   const $btn = $(btnSelector);
-  const $body = $("body");
+  const $body = $(bodySelector);
   const $extraEls = extraTargets.map(sel => $(sel));
 
   function toggleMenu(isOpen) {
@@ -24,6 +25,11 @@ export function initHamburgerMenu({
   $btn.on("click", () => {
     const isOpening = !$nav.hasClass("is-active");
     toggleMenu(isOpening);
+  });
+
+  // ナビ内のリンククリックでメニューを閉じる（同一ページ内リンク対応）
+  $nav.on("click", "a", () => {
+    toggleMenu(false);
   });
 }
 // ▲ハンバーガーメニュー

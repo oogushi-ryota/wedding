@@ -1,0 +1,25 @@
+@use "global/import" as *;
+
+.l-flex-wrap {
+  & {
+    
+  }
+
+  @include pc-wide {
+    width: 116rem;
+    margin-inline: auto;
+    padding: 0 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12rem;
+  }
+
+  @include pc {
+    height: 85dvh;
+  }
+
+  @include sp {
+    
+  }
+}

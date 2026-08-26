@@ -1,12 +1,29 @@
 // ▼スムーススクロール処理
 export function initAnchorSmoothScroll() {
   /**
-   * CSS変数から header 高さを取得
+   * ターゲット要素自身の scroll-margin-top を取得
+   * （セクションごとにCSSでオフセットの有無を調整できる）
    */
-  const getHeaderHeight = () => {
-    const value = getComputedStyle(document.documentElement)
-      .getPropertyValue('--header-height');
-    return parseFloat(value) || 0;
+  const getScrollMarginTop = (el) => {
+    return parseFloat(getComputedStyle(el).scrollMarginTop) || 0;
+  };
+
+  /**
+   * targetを実際にスクロールしている祖先要素を探す
+   * （PCレイアウトでは window ではなく .l-sp-wrap 等がスクロールコンテナになるため）
+   */
+  const getScrollParent = (el) => {
+    let parent = el.parentElement;
+
+    while (parent) {
+      const { overflowY } = getComputedStyle(parent);
+      if ((overflowY === 'auto' || overflowY === 'scroll') && parent.scrollHeight > parent.clientHeight) {
+        return parent;
+      }
+      parent = parent.parentElement;
+    }
+
+    return document.scrollingElement || document.documentElement;
   };
 
   /**
@@ -15,16 +32,21 @@ export function initAnchorSmoothScroll() {
   const scrollToTarget = (target, smooth = true) => {
     if (!target) return;
 
-    const headerHeight = getHeaderHeight();
-    const offset =
-      target.getBoundingClientRect().top +
-      window.pageYOffset -
-      headerHeight;
+    const scrollMarginTop = getScrollMarginTop(target);
+    const scrollParent = getScrollParent(target);
+    const behavior = smooth ? 'smooth' : 'auto';
 
-    window.scrollTo({
-      top: offset,
-      behavior: smooth ? 'smooth' : 'auto',
-    });
+    if (scrollParent === document.scrollingElement || scrollParent === document.documentElement) {
+      const offset = target.getBoundingClientRect().top + window.pageYOffset - scrollMarginTop;
+      window.scrollTo({ top: offset, behavior });
+    } else {
+      const offset =
+        target.getBoundingClientRect().top -
+        scrollParent.getBoundingClientRect().top +
+        scrollParent.scrollTop -
+        scrollMarginTop;
+      scrollParent.scrollTo({ top: offset, behavior });
+    }
   };
 
   /**
@@ -55,7 +77,12 @@ export function initAnchorSmoothScroll() {
       if (!target) return;
 
       e.preventDefault();
-      scrollToTarget(target, true);
+
+      // ハンバーガーメニューを閉じる処理（別リスナー）が先に完了してから
+      // スクロールコンテナを判定させるため、1ティック遅らせる
+      setTimeout(() => {
+        scrollToTarget(target, true);
+      }, 0);
     });
   });
 }

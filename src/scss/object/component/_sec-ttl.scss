@@ -1,0 +1,57 @@
+@use "global/import" as *;
+
+.c-sec-ttl {
+  & {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &__ttl {
+      font-family: $ff-cinzel;
+      font-size: 3.2rem;
+      font-weight: $base-font-regular;
+      letter-spacing: .1em;
+      line-height: 100%;
+      text-align: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: .8rem;
+
+      &--wt {
+        color: color(wt,off);
+      }
+    }
+
+    &__obj {
+      width: 100%;
+      height: .6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.8rem;
+      background-image: linear-gradient(color(brn,base), color(brn,base));
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: .6rem .6rem;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        flex: 1;
+        height: 1px;
+        background-color: color(brn,base);
+      }
+    }
+  }
+
+  @include pc {
+    
+  }
+
+  @include sp {
+    
+  }
+}

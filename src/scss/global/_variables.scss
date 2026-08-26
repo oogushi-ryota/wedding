@@ -1,10 +1,13 @@
 // フォント
-$ff-noto-sans-jp: "Noto Sans JP", sans-serif;
-$ff-oswald: "Oswald", sans-serif;
+$ff-noto-serif-jp: "Noto Serif JP", serif;
+$ff-libre-caslon: "Libre Caslon Display", serif;
+$ff-caveat: "Caveat", cursive;
+$ff-cinzel: "Cinzel", serif;
 
 // ブレイクポイント
 $bp-sp: 767px;  // SP 〜767px
 $bp-pc: 768px;  // PC 768px〜
+$bp-pc-wide: 1080px;  // PC(ワイド) 1080px〜
 
 // デザインデータ幅
 $vp-pc: 1920;

@@ -1,0 +1,313 @@
+@use "./global/import" as *;
+
+.p-rsvp {
+  & {
+    margin-top: 12rem;
+    padding-bottom: 8rem;
+
+    &__inner {
+      padding: 4rem 2rem;
+    }
+
+    &__form {
+      margin-top: 3.2rem;
+    }
+
+    &__note {
+      font-size: 1.4rem;
+      font-weight: $base-font-medium;
+      line-height: 100%;
+      letter-spacing: .1em;
+      display: block;
+      padding-bottom: 2rem;
+
+      span {
+        color: color(red,base);
+      }
+    }
+
+    &__blk {
+      padding: 2rem 0;
+      border-top: solid 1px color(brn,base);
+
+      &:last-of-type {
+        border-bottom: solid 1px color(brn,base);
+      }
+    }
+
+    &__blk-head {
+      // legendはmargin/paddingを無視してfieldsetの境界線に食い込むため、floatで通常の配置に切り替える
+      float: left;
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: .4rem;
+    }
+
+    // legendのfloatによって後続コンテンツが回り込んでしまうため、明示的にクリアする
+    &__blk > *:not(.p-rsvp__blk-head) {
+      clear: both;
+    }
+
+    &__blk-ttl,
+    &__required {
+      font-size: 1.6rem;
+      font-weight: $base-font-medium;
+      line-height: 100%;
+      letter-spacing: .1em;
+    }
+
+    &__blk-txt {
+      font-size: 1.4rem;
+      font-weight: $base-font-medium;
+      line-height: 150%;
+      letter-spacing: .1em;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-top: 2.4rem;
+
+      &::before {
+        content: "※";
+        font-size: 1.4rem;
+        font-weight: $base-font-medium;
+        line-height: 150%;
+        letter-spacing: .1em;
+      }
+
+      & + .p-rsvp__check-list,
+      & + .p-rsvp__input-txt {
+        margin-top: 1.2rem;
+      }
+    }
+
+    &__required {
+      color: color(red,base);
+    }
+
+    &__check-list {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-top: 2.6rem;
+    }
+
+    &__check-item {
+      min-width: 10rem;
+    }
+
+    &__check-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 1.2rem;
+      border-radius: .6rem;
+      border: solid 1px color(gry,base);
+      background-color: color(gry,base);
+      cursor: pointer;
+      transition: background-color .2s ease-out, border-color .2s ease-out;
+
+      &:has(input:checked) {
+        background-color: color(wt,base);
+        border-color: color(brn,base);
+      }
+    }
+
+    &__check-ui {
+      display: none;
+    }
+
+    &__check-txt {
+      font-size: 1.4rem;
+      font-weight: $base-font-medium;
+      letter-spacing: .05em;
+      line-height: 100%;
+    }
+
+    input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    &__input-txt,
+    &__select {
+      font-size: 1.4rem;
+      font-weight: $base-font-medium;
+      line-height: 100%;
+      letter-spacing: .05em;
+      display: block;
+      width: 100%;
+      background-color: color(wt,base);
+      border-radius: .6rem;
+      margin-top: 2.6rem;
+      padding: 1.2rem;
+      border: solid 1px color(gry,sub);
+
+      &::placeholder {
+        color: rgba($color: $base-font-color, $alpha: .2);
+      }
+
+      & + & {
+        margin-top: 1.2rem;
+      }
+    }
+
+    &__select {
+      padding-right: 3.2rem;
+    }
+
+    &__textarea {
+      min-height: 18rem;
+      resize: vertical;
+      line-height: 150%;
+    }
+
+    &__select-wrap {
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        width: .8rem;
+        height: .6rem;
+        background-color: color(brn,base);
+        clip-path: polygon(0 0, 100% 0, 50% 100%);
+        position: absolute;
+        top: 50%;
+        right: 1.2rem;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+    }
+
+    &__link {
+      font-size: 1.6rem;
+      font-weight: $base-font-medium;
+      line-height: 100%;
+      letter-spacing: .1em;
+      text-decoration: underline;
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: .8rem;
+      flex-shrink: 0;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 1.2rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      @include pc {
+        @include hover {
+          text-decoration: unset;
+        }
+      }
+
+      &--pdf {
+        &::after {
+          height: 1.5rem;
+          background-image: url(/assets/img/common/icon_pdf.svg);
+        }
+      }
+
+      &--link {
+        &::after {
+          width: 1.4rem;
+          height: 1.4rem;
+          background-image: url(/assets/img/common/icon_link.svg);
+        }
+      }
+
+      & + .p-rsvp__blk-txt {
+        margin-top: .8rem;
+      }
+    }
+
+    &__choice {
+      margin-top: 8rem;
+
+      .c-sec-ttl {
+        & + .p-rsvp__blk {
+          margin-top: 3.2rem;
+        }
+      }
+    }
+
+    &__choice-txt {
+      font-size: 1.6rem;
+      font-weight: $base-font-medium;
+      line-height: 100%;
+      letter-spacing: .1em;
+      text-align: center;
+      margin-top: 3.2rem;
+
+      & + .p-rsvp__blk {
+        margin-top: 3.2rem;
+      }
+    }
+
+    &__btn {
+      margin-top: 4rem;
+
+      &--back {
+        &::after {
+          content: "<";
+          right: unset;
+          left: 2rem;
+        }
+      }
+    }
+
+    &__btn-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2.4rem;
+      margin-top: 4rem;
+
+      .p-rsvp__btn {
+        margin-top: 0;
+      }
+    }
+
+    &__closing-txt {
+      color: color(brn,base);
+      font-family: $ff-caveat;
+      font-size: 1.4rem;
+      font-weight: $base-font-regular;
+      line-height: 120%;
+      letter-spacing: .05em;
+      text-align: center;
+      margin-top: 2.4rem;
+    }
+
+    &__confirm-txt {
+      font-size: 1.4rem;
+      font-weight: $base-font-medium;
+      line-height: 100%;
+      letter-spacing: .05em;
+      display: block;
+      width: 100%;
+      margin-top: 2.8rem;
+    }
+  }
+
+  @include pc {
+    
+  }
+
+  @include sp {
+    
+  }
+}

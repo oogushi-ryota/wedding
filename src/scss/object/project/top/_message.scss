@@ -1,0 +1,64 @@
+@use "./global/import" as *;
+
+.p-top-message {
+  & {
+    background-color: color(crm,base);
+    margin-top: 8rem;
+
+    &__inner {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
+
+    &__txtblk {
+      margin-top: 3.2rem;
+    }
+
+    &__txt,
+    &__signature-txt {
+      font-weight: $base-font-medium;
+      font-size: 1.4rem;
+      line-height: 160%;
+      letter-spacing: .05em;
+      text-align: center;
+
+      & + & {
+        margin-top: 1.6em;
+      }
+    }
+
+    &__signature {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    &__signature-txt {
+      text-align: left;
+      margin-top: 2.4rem;
+    }
+
+    &__fig,
+    &__pic {
+      display: block;
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__fig {
+      margin-top: 3.2rem;
+    }
+  }
+
+  @include pc {
+    
+  }
+
+  @include sp {
+    
+  }
+}

@@ -4,7 +4,7 @@
   &-active {
     &.l-header__nav {
       opacity: 1;
-      visibility: visible;
+      pointer-events: all;
     }
 
     &.l-header__hamburger {
@@ -34,5 +34,20 @@
         }
       }
     }
+
+    &.l-body {
+      overflow: hidden;
+    }
+
+    &.js-fadein {
+      opacity: 1;
+      filter: blur(0);
+    }
   }
+}
+
+.js-fadein {
+  opacity: 0;
+  filter: blur(1rem);
+  transition: opacity .8s ease-out, filter .8s ease-out;
 }

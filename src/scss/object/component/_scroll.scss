@@ -1,0 +1,40 @@
+@use "global/import" as *;
+
+.c-scroll {
+  & {
+    transform: rotate(90deg);
+    transform-origin: right top;
+    position: absolute;
+    bottom: -1.4rem;
+    right: -3.2rem;
+
+    &__txt { 
+      color: color(brn,base);
+      font-family: $ff-cinzel;
+      font-size: 1.2rem;
+      font-weight: $base-font-regular;
+      letter-spacing: .1em;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: vw(10);
+
+      &::after {
+        content: "";
+        display: block;
+        width: 12rem;
+        height: 1px;
+        background-color: color(brn,base);
+      }
+    }
+  }
+
+  @include pc {
+    
+  }
+
+  @include sp {
+    
+  }
+}

@@ -13,35 +13,16 @@
   }
 }
 
+@mixin pc-wide {
+  @media (min-width: #{$bp-pc-wide}) {
+    @content;
+  }
+}
+
 @mixin hover {
   @media (hover: hover) {
     &:hover {
       @content;
-    }
-  }
-}
-
-@mixin hover-opacity {
-  transition: opacity .3s ease-out;
-
-  &:hover {
-    opacity: .5;
-  }
-}
-
-@mixin hover-btn {
-  transition: background-color .3s ease-out, color .3s ease-out;
-
-  &::after {
-    transition: color .3s ease-out;
-  }
-
-  &:hover {
-    background-color: color(wt,base);
-    color: color(gld,base);
-
-    &::after {
-      color: color(gld,base);
     }
   }
 }

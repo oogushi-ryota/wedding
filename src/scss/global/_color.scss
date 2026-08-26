@@ -1,22 +1,24 @@
 @use "sass:map";
 
 // デフォルトの色
-$base-font-color: #444;
-$base-bg-color: #F6F6F6;
+$base-font-color: #06203A;
+$base-bg-color: #06203A;
 
 // パレットの定義
 $color-palette: (
   wt : (
     base : #FFF,
+    off : #FAF9F9,
   ),
-  bk : (
-    base : #000,
+  crm: (
+    base : #FCFAEB,
+  ),
+  brn: (
+    base : #B39E85,
   ),
   gry: (
-    base : #DDDCDC,
-  ),
-  gld: (
-    base : #B49517,
+    base : #EDECEA,
+    sub : #EBEBEB,
   ),
   red: (
     base : #FF0000,

@@ -1,0 +1,55 @@
+@use "./global/import" as *;
+
+.p-top-rsvp {
+  & {
+    margin-top: 8rem;
+
+    &__ttl-ja {
+      color: color(wt,off);
+      font-size: 1.4rem;
+      font-weight: $base-font-medium;
+      line-height: 100%;
+      letter-spacing: .1em;
+      text-align: center;
+      display: block;
+      margin-top: 3.2rem;
+    }
+
+    &__txt,
+    &__note {
+      color: color(brn,base);
+      font-size: 1.4rem;
+      font-weight: $base-font-medium;
+      line-height: 180%;
+      letter-spacing: .1em;
+      text-align: center;
+    }
+
+    &__txt {
+      margin-top: 3.2rem;
+    }
+
+    &__em {
+      font-size: 2.4rem;
+      line-height: 140%;
+    }
+
+    &__note {
+      border: solid 1px color(brn,base);
+      margin-top: 2.4rem;
+      padding: 1.4rem 1.2rem;
+    }
+
+    &__btn {
+      margin-top: 4rem;
+    }
+  }
+
+  @include pc {
+    
+  }
+
+  @include sp {
+    
+  }
+}

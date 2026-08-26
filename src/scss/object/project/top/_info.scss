@@ -1,0 +1,167 @@
+@use "./global/import" as *;
+
+.p-top-info {
+  & {
+    margin-top: 8rem;
+
+    &__inner {
+      padding: 4rem 2rem;
+    }
+
+    &__date {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: .8rem;
+      margin-top: 3.2rem;
+    }
+
+    &__date-head {
+      color: color(brn,base);
+      font-family: $ff-libre-caslon;
+      font-size: 2.4rem;
+      font-weight: $base-font-regular;
+      line-height: 100%;
+      letter-spacing: .1em;
+    }
+
+    &__date-details {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: .8rem;
+    }
+
+    &__date-time,
+    &__date-week {
+      font-family: $ff-libre-caslon;
+      font-weight: $base-font-regular;
+      line-height: 100%;
+      letter-spacing: .1em;
+    }
+
+    &__date-time {
+      font-size: 3.2rem;
+    }
+
+    &__date-week {
+      font-size: 1.6rem;
+      padding-bottom: .2rem;
+    }
+
+    &__blk {
+      margin-top: 3.2rem;
+    }
+
+    &__blk-head {
+      color: color(brn,base);
+      font-size: 1.8rem;
+      font-weight: $base-font-medium;
+      line-height: 100%;
+      letter-spacing: .1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .8rem;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $base-bg-color;
+        flex: 1;
+      }
+    }
+
+    &__blk-time {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .8rem;
+      margin-top: 2.4rem;
+    }
+
+    &__blk-time-txt {
+      font-size: 1.4rem;
+      font-weight: $base-font-medium;
+      line-height: 100%;
+      letter-spacing: .1em;
+    }
+
+    &__blk-time-num {
+      font-family: $ff-libre-caslon;
+      font-size: 3.2rem;
+      font-weight: $base-font-regular;
+      line-height: 100%;
+      letter-spacing: .1em;
+    }
+
+    &__blk-txt,
+    &__link {
+      font-size: 1.4rem;
+      font-weight: $base-font-medium;
+      letter-spacing: .1em;
+      text-align: center;
+    }
+
+    &__blk-txt { 
+      line-height: 160%;
+      margin-top: 1.6rem;
+    }
+
+    &__link {
+      line-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .8rem;
+      text-decoration: underline;
+      margin-top: 2.4rem;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 1.2rem;
+        height: 1.2rem;
+        background-image: url(/assets/img/common/icon_link.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        flex-shrink: 0;
+      }
+
+      @include pc {
+        @include hover {
+          text-decoration: unset;
+        }
+      }
+    }
+
+    &__iflame {
+      width: 100%;
+      height: 20rem;
+      margin-top: 1.6rem;
+    }
+
+    &__closing {
+      color: color(brn,base);
+      font-family: $ff-caveat;
+      font-size: 1.4rem;
+      font-weight: $base-font-regular;
+      line-height: 120%;
+      letter-spacing: .05em;
+      text-align: center;
+      margin-top: 1.6rem;
+    }
+  }
+
+  @include pc {
+
+  }
+
+  @include sp {
+
+  }
+}

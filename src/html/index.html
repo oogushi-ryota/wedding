@@ -3,105 +3,301 @@
 <!--#include virtual="/inc/head.html" -->
 
 <body>
-  <!--#include virtual="/inc/header.html" -->
   <main class="l-main">
-    <div class="p-top">
-      <div class="p-top-fv">
-        <picture class="p-top-fv__img">
-          <source srcset="../assets/img/top/fv/fv.webp" type="image/webp">
-          <img src="../assets/img/top/fv/fv.jpg" alt="" width="1920" height="980">
-        </picture>
+    <div class="l-flex-wrap">
+      <div class="l-pc-cont">
+        <div class="l-pc-cont__count">
+          <div class="l-pc-cont__count-head">
+            <span class="l-pc-cont__name">RYOTA & YUKA</span>
+            <time datetime="2026-11-21" class="l-pc-cont__time">2026.11.21</time>
+            <span class="l-pc-cont__date">Saturday  13:00 PM</span>
+          </div>
+          <div class="l-pc-cont__countdown">
+            <div class="l-pc-cont__countdown-item">
+              <span class="l-pc-cont__countdown-item-num js-countdown-days">195</span>
+              <span class="l-pc-cont__countdown-item-txt">days</span>
+            </div>
+            <div class="l-pc-cont__countdown-item">
+              <span class="l-pc-cont__countdown-item-num js-countdown-hours">23</span>
+              <span class="l-pc-cont__countdown-item-txt">hours</span>
+            </div>
+            <div class="l-pc-cont__countdown-item">
+              <span class="l-pc-cont__countdown-item-num js-countdown-minutes">16</span>
+              <span class="l-pc-cont__countdown-item-txt">minutes</span>
+            </div>
+            <div class="l-pc-cont__countdown-item">
+              <span class="l-pc-cont__countdown-item-num js-countdown-seconds">48</span>
+              <span class="l-pc-cont__countdown-item-txt">seconds</span>
+            </div>
+          </div>
+        </div>
+        <div class="l-pc-cont__info">
+          <p class="l-pc-cont__info-txt">誠に勝手ながら<br><em class="l-pc-cont__info-em">2026年10月15日 (木)</em>迄に<br>ご回答いただければ幸いに存じます</p>
+          <a href="/rsvp/" class="c-btn l-pc-cont__info-btn">招待状に回答する</a>
+        </div>
       </div>
-
-      <section class="p-top-appeal">
-        <div class="c-inner c-inner--102">
-          <picture class="p-top-appeal__img">
-            <source srcset="../assets/img/top/appeal/appeal_img.webp" type="image/webp">
-            <img src="../assets/img/top/appeal/appeal_img.jpg" alt="" width="1280" height="720" loading="lazy">
-          </picture>
-        </div>
-      </section>
-
-      <section class="p-top-artist">
-        <div class="c-inner">
-          <h2 class="c-ttl">
-            <span class="c-ttl__en">ARTIST</span>
-            <span class="c-ttl__ja">アーティスト</span>
-          </h2>
-          <div class="c-artist-post">
-            <ul class="c-artist-post__list">
-              <li class="c-artist-post__item">
-                <figure class="c-artist-post__thumb">
-                  <img src="../assets/img/common/thumb.jpg" alt="" width="700" height="394" loading="lazy">
-                </figure>
-                <p class="c-artist-post__ttl">アーティスト名が入ります</p>
-                <div class="c-artist-post__btn">
-                  <a href="" class="c-artist-post__link">VIEW MORE</a>
-                </div>
-              </li>
-              <li class="c-artist-post__item">
-                <figure class="c-artist-post__thumb">
-                  <img src="../assets/img/common/thumb.jpg" alt="" width="700" height="394" loading="lazy">
-                </figure>
-                <p class="c-artist-post__ttl">アーティスト名が入ります</p>
-                <div class="c-artist-post__btn">
-                  <a href="" class="c-artist-post__link">VIEW MORE</a>
-                </div>
-              </li>
-            </ul>
-            <div class="p-top-artist__btn">
-              <a href="/artist" class="c-btn">VIEW ALL</a>
+      <div class="l-main__wrap">
+        <div class="l-sp-wrap l-body">
+          <!--#include virtual="/inc/header.html" -->
+          <div class="p-top">
+            <div class="p-top-fv">
+              <div class="swiper-container js-fv-slider">
+                <ul class="p-top-fv__slider swiper-wrapper">
+                  <li class="p-top-fv__slide swiper-slide">
+                    <figure class="p-top-fv__slide-fig">
+                      <picture class="p-top-fv__slide-pic">
+                        <source srcset="/assets/img/top/fv/fv_slide01.webp" media="(max-width: 767px)">
+                        <img src="/assets/img/top/fv/fv_slide01.jpg" alt="" width="390" height="844">
+                      </picture>
+                    </figure>
+                  </li>
+                  <li class="p-top-fv__slide swiper-slide">
+                    <figure class="p-top-fv__slide-fig">
+                      <picture class="p-top-fv__slide-pic">
+                        <source srcset="/assets/img/top/fv/fv_slide02.webp" media="(max-width: 767px)">
+                        <img src="/assets/img/top/fv/fv_slide02.jpg" alt="" width="390" height="844">
+                      </picture>
+                    </figure>
+                  </li>
+                  <li class="p-top-fv__slide swiper-slide">
+                    <figure class="p-top-fv__slide-fig">
+                      <picture class="p-top-fv__slide-pic">
+                        <source srcset="/assets/img/top/fv/fv_slide03.webp" media="(max-width: 767px)">
+                        <img src="/assets/img/top/fv/fv_slide03.jpg" alt="" width="390" height="844">
+                      </picture>
+                    </figure>
+                  </li>
+                  <li class="p-top-fv__slide swiper-slide">
+                    <figure class="p-top-fv__slide-fig">
+                      <picture class="p-top-fv__slide-pic">
+                        <source srcset="/assets/img/top/fv/fv_slide04.webp" media="(max-width: 767px)">
+                        <img src="/assets/img/top/fv/fv_slide04.jpg" alt="" width="390" height="844">
+                      </picture>
+                    </figure>
+                  </li>
+                  <li class="p-top-fv__slide swiper-slide">
+                    <figure class="p-top-fv__slide-fig">
+                      <picture class="p-top-fv__slide-pic">
+                        <source srcset="/assets/img/top/fv/fv_slide05.webp" media="(max-width: 767px)">
+                        <img src="/assets/img/top/fv/fv_slide05.jpg" alt="" width="390" height="844">
+                      </picture>
+                    </figure>
+                  </li>
+                </ul>
+              </div>
+              <div class="p-top-fv__txtblk">
+                <h1 class="p-top-fv__ttl">
+                  <span class="p-top-fv__ttl-main">WEDDING<br>INVITATION</span>
+                  <span class="p-top-fv__ttl-copy">Thank you for being part of our story.</span>
+                </h1>
+                <span class="p-top-fv__message">We would be honored to have you celebrate this special day with us.</span>
+                <time datetime="2026-11-21" class="p-top-fv__time">2026.11.21</time>
+              </div>
+              <span class="p-top-fv__name">Ryota & Yuka</span>
             </div>
+
+            <section class="p-top-count js-fadein" id="countdown">
+              <div class="c-inner">
+                <div class="c-sec-bg">
+                  <div class="c-sec-bg__wrap">
+                    <div class="p-top-count__inner">
+                      <h2 class="p-top-count__ttl">COUNT DOWN</h2>
+                      <div class="p-top-count__countdown js-countdown">
+                        <div class="p-top-count__countdown-head">
+                          <span class="p-top-count__countdown-days js-countdown-days">195</span>
+                          <span class="p-top-count__countdown-days-txt">days</span>
+                        </div>
+                        <div class="p-top-count__countdown-body">
+                          <div class="p-top-count__countdown-body-item">
+                            <span class="p-top-count__countdown-item-num js-countdown-hours">23</span>
+                            <span class="p-top-count__countdown-item-txt">hours</span>
+                          </div>
+                          <div class="p-top-count__countdown-body-item">
+                            <span class="p-top-count__countdown-item-num js-countdown-minutes">16</span>
+                            <span class="p-top-count__countdown-item-txt">minutes</span>
+                          </div>
+                          <div class="p-top-count__countdown-body-item">
+                            <span class="p-top-count__countdown-item-num js-countdown-seconds">48</span>
+                            <span class="p-top-count__countdown-item-txt">seconds</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="p-top-count__wedding">
+                        <span class="p-top-count__wedding-lead">TO OUR WEDDING</span>
+                        <time datetime="2026-11-21" class="p-top-count__wedding-time">2026.11.21</time>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="p-top-message" id="message">
+              <div class="c-inner p-top-message__inner">
+                <div class="c-sec-ttl js-fadein">
+                  <h2 class="c-sec-ttl__ttl">MESSAGE<span class="c-sec-ttl__obj"></span></h2>
+                </div>
+                <div class="p-top-message__txtblk js-fadein">
+                  <p class="p-top-message__txt">謹 啓</p>
+                  <p class="p-top-message__txt">皆様におかれましては<br>ご清祥のこととお慶び申し上げます</p>
+                  <p class="p-top-message__txt">このたび 私たちは結婚式を挙げる運びとなりました<br>つきましては 日頃お世話になっております皆様に<br>お集まりいただきささやかな披露宴を<br>催したく存じます</p>
+                  <p class="p-top-message__txt">ご多用中誠に恐縮ではございますが<br>ご臨席賜りますよう謹んでご案内申し上げます</p>
+                </div>
+                <div class="p-top-message__signature">
+                  <p class="p-top-message__signature-txt">謹 白<br>令和8年9月吉日</p>
+                </div>
+                <figure class="p-top-message__fig  js-fadein">
+                  <picture class="p-top-message__pic">
+                    <source srcset="/assets/img/top/message/message_img.webp" media="(max-width: 767px)">
+                    <img src="/assets/img/top/message/message_img.jpg" alt="" width="350" height="251" loading="lazy">
+                  </picture>
+                </figure>
+              </div>
+            </section>
+
+            <section class="p-top-profile" id="profile">
+              <div class="c-inner">
+                <div class="c-sec-ttl js-fadein">
+                  <h2 class="c-sec-ttl__ttl c-sec-ttl__ttl--wt">PROFILE<span class="c-sec-ttl__obj"></span></h2>
+                </div>
+                <div class="p-top-profile__blk">
+                  <div class="p-top-profile__item js-fadein">
+                    <figure class="p-top-profile__fig">
+                      <picture class="p-top-profile__pic">
+                        <source srcset="/assets/img/top/profile/profile_img01.webp" media="(max-width: 767px)">
+                        <img src="/assets/img/top/profile/profile_img01.png" alt="" width="328" height="284" loading="lazy">
+                      </picture>
+                    </figure>
+                    <div class="p-top-profile__name-blk">
+                      <span class="p-top-profile__type">新郎</span>
+                      <span class="p-top-profile__name">大串 涼太</span>
+                    </div>
+                    <p class="p-top-profile__txt">皆様にお会いできることが今から楽しみです！<br>美味しい料理と飲み物をご用意して<br>お待ちしています</p>
+                  </div>
+                  <div class="p-top-profile__item js-fadein">
+                    <figure class="p-top-profile__fig">
+                      <picture class="p-top-profile__pic">
+                        <source srcset="/assets/img/top/profile/profile_img02.webp" media="(max-width: 767px)">
+                        <img src="/assets/img/top/profile/profile_img02.png" alt="" width="328" height="284" loading="lazy">
+                      </picture>
+                    </figure>
+                    <div class="p-top-profile__name-blk">
+                      <span class="p-top-profile__type">新婦</span>
+                      <span class="p-top-profile__name">指簱 優佳</span>
+                    </div>
+                    <p class="p-top-profile__txt">いつも支えてくれて<br>本当にありがとうございます！<br>これからも 夫婦共々<br>よろしくお願いいたします</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="p-top-album" id="album">
+              <div class="c-inner js-fadein">
+                <div class="c-sec-ttl">
+                  <h2 class="c-sec-ttl__ttl">ALBUM<span class="c-sec-ttl__obj"></span></h2>
+                </div>
+                <div class="swiper-container js-album-slider">
+                  <ul class="p-top-album__slider swiper-wrapper">
+                    <li class="p-top-album__slide swiper-slide">
+                      <figure class="p-top-album__slide-fig">
+                        <picture class="p-top-album__slide-pic">
+                          <source srcset="/assets/img/top/album/album_slide01.webp" media="(max-width: 767px)">
+                          <img src="/assets/img/top/album/album_slide01.jpg" alt="" width="350" height="251" loading="lazy">
+                        </picture>
+                      </figure>
+                    </li>
+                    <li class="p-top-album__slide swiper-slide">
+                      <figure class="p-top-album__slide-fig">
+                        <picture class="p-top-album__slide-pic">
+                          <source srcset="/assets/img/top/album/album_slide02.webp" media="(max-width: 767px)">
+                          <img src="/assets/img/top/album/album_slide02.jpg" alt="" width="350" height="251" loading="lazy">
+                        </picture>
+                      </figure>
+                    </li>
+                    <li class="p-top-album__slide swiper-slide">
+                      <figure class="p-top-album__slide-fig">
+                        <picture class="p-top-album__slide-pic">
+                          <source srcset="/assets/img/top/album/album_slide03.webp" media="(max-width: 767px)">
+                          <img src="/assets/img/top/album/album_slide03.jpg" alt="" width="350" height="251" loading="lazy">
+                        </picture>
+                      </figure>
+                    </li>
+                    <li class="p-top-album__slide swiper-slide">
+                      <figure class="p-top-album__slide-fig">
+                        <picture class="p-top-album__slide-pic">
+                          <source srcset="/assets/img/top/album/album_slide04.webp" media="(max-width: 767px)">
+                          <img src="/assets/img/top/album/album_slide04.jpg" alt="" width="350" height="251" loading="lazy">
+                        </picture>
+                      </figure>
+                    </li>
+                  </ul>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="p-top-info js-fadein" id="info">
+              <div class="c-inner">
+                <div class="c-sec-bg">
+                  <div class="c-sec-bg__wrap">
+                    <div class="p-top-info__inner">
+                      <div class="c-sec-ttl">
+                        <h2 class="c-sec-ttl__ttl">PARTY<br>INFORMATION<span class="c-sec-ttl__obj"></span></h2>
+                      </div>
+                      <div class="p-top-info__date">
+                        <span class="p-top-info__date-head">Date</span>
+                        <span class="p-top-info__date-details">
+                          <time datetime="2026-11-21" class="p-top-info__date-time">2026.11.21</time>
+                          <span class="p-top-info__date-week">Sat</span>
+                        </span>
+                      </div>
+                      <div class="p-top-info__blk">
+                        <span class="p-top-info__blk-head">挙式</span>
+                        <div class="p-top-info__blk-time">
+                          <span class="p-top-info__blk-time-txt">開始時刻</span>
+                          <span class="p-top-info__blk-time-num">13:50</span>
+                        </div>
+                        <p class="p-top-info__blk-txt">受付 12:50 ~ 13:30</p>
+                      </div>
+                      <div class="p-top-info__blk">
+                        <span class="p-top-info__blk-head">披露宴</span>
+                        <div class="p-top-info__blk-time">
+                          <span class="p-top-info__blk-time-txt">開始時刻</span>
+                          <span class="p-top-info__blk-time-num">14:40</span>
+                        </div>
+                      </div>
+                      <div class="p-top-info__blk">
+                        <span class="p-top-info__blk-head">会場情報</span>
+                        <a href="https://h-wedding.com/cortile/access/" class="p-top-info__link" target="_blank">コルティーレ茅ヶ崎</a>
+                        <p class="p-top-info__blk-txt">〒253-0073<br>神奈川県茅ケ崎市中島1341<br>TEL : 0467-87-0002</p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3255.0159121679512!2d139.37884421163767!3d35.33042634905073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601852c0c6a189fb%3A0x436b8a36ee2fbf53!2z44Kz44Or44OG44Kj44O844Os6IyF44O25bSO!5e0!3m2!1sja!2sjp!4v1787373783723!5m2!1sja!2sjp" class="p-top-info__iflame" width="310" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                      </div>
+                      <p class="p-top-info__closing">Join us as we celebrate our wedding day<br>and share this special moment<br>with those we hold dear.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="p-top-rsvp js-fadein" id="rsvp">
+              <div class="c-inner">
+                <div class="c-sec-ttl">
+                  <h2 class="c-sec-ttl__ttl c-sec-ttl__ttl--wt">RSVP<span class="c-sec-ttl__obj"></span></h2>
+                </div>
+                <span class="p-top-rsvp__ttl-ja">ご出欠について</span>
+                <p class="p-top-rsvp__txt">誠に勝手ながら<br><em class="p-top-rsvp__em">2026年10月15日 (木)</em>迄に<br>ご回答いただければ幸いに存じます</p>
+                <p class="p-top-rsvp__note">万が一ご都合が合わなくなってしまった場合は<br>直接ご連絡ください</p>
+                <a href="/rsvp/" class="c-btn p-top-rsvp__btn">招待状に回答する</a>
+              </div>
+            </section>
           </div>
         </div>
-      </section>
-
-      <section class="p-top-talent">
-        <div class="c-inner">
-          <h2 class="c-ttl">
-            <span class="c-ttl__en">TALENT</span>
-            <span class="c-ttl__ja">タレント</span>
-          </h2>
-          <div class="c-talent-post">
-            <ul class="c-talent-post__list">
-              <li class="c-talent-post__item">
-                <figure class="c-talent-post__thumb">
-                  <img src="../assets/img/common/thumb02.jpg" alt="" width="454" height="587" loading="lazy">
-                </figure>
-                <p class="c-talent-post__ttl">アーティスト名が入ります</p>
-                <div class="c-talent-post__btn">
-                  <a href="" class="c-talent-post__link">VIEW MORE</a>
-                </div>
-              </li>
-              <li class="c-talent-post__item">
-                <figure class="c-talent-post__thumb">
-                  <img src="../assets/img/common/thumb02.jpg" alt="" width="454" height="587" loading="lazy">
-                </figure>
-                <p class="c-talent-post__ttl">アーティスト名が入ります</p>
-                <div class="c-talent-post__btn">
-                  <a href="" class="c-talent-post__link">VIEW MORE</a>
-                </div>
-              </li>
-              <li class="c-talent-post__item">
-                <figure class="c-talent-post__thumb">
-                  <img src="../assets/img/common/thumb02.jpg" alt="" width="454" height="587" loading="lazy">
-                </figure>
-                <p class="c-talent-post__ttl">アーティスト名が入ります</p>
-                <div class="c-talent-post__btn">
-                  <a href="" class="c-talent-post__link">VIEW MORE</a>
-                </div>
-              </li>
-            </ul>
-            <div class="p-top-talent__btn">
-              <a href="/talent" class="c-btn">VIEW ALL</a>
-            </div>
-          </div>
+        <div class="c-scroll pc">
+          <span class="c-scroll__txt">SCROLL</span>
         </div>
-      </section>
+      </div>
     </div>
-    <!--#include virtual="/inc/contact.html" -->
   </main>
-  <!--#include virtual="/inc/footer.html" -->
   <!--#include virtual="/inc/foot.html" -->
 </body>
 </html>

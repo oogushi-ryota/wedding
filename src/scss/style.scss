@@ -8,28 +8,39 @@
 // ===================================
 // Layout
 // ===================================
+@use "layout/flex-wrap" as *;
+@use "layout/pc-cont" as *;
+@use "layout/sp-wrap" as *;
 @use "layout/header" as *;
-@use "layout/footer" as *;
 @use "layout/main" as *;
+@use "layout/body" as *;
 
 // ===================================
 // Component
 // ===================================
 @use "object/component/inner" as *;
-@use "object/component/ttl" as *;
-
-@use "object/component/top-secttl" as *;
+@use "object/component/sec-bg" as *;
+@use "object/component/sec-ttl" as *;
 @use "object/component/btn" as *;
+@use "object/component/scroll" as *;
 
 // ===================================
 // Project
 // ===================================
 // トップページ
 @use "object/project/top/index" as *;
-@use "object/project/top/appeal" as *;
 @use "object/project/top/fv" as *;
-@use "object/project/top/artist" as *;
-@use "object/project/top/talent" as *;
+@use "object/project/top/count" as *;
+@use "object/project/top/message" as *;
+@use "object/project/top/profile" as *;
+@use "object/project/top/album" as *;
+@use "object/project/top/info" as *;
+@use "object/project/top/rsvp" as *;
+
+// RSVPページ
+@use "object/project/rsvp/index" as *;
+@use "object/project/rsvp/thanks" as *;
+@use "object/project/rsvp/error" as *;
 
 // ===================================
 // Utility
