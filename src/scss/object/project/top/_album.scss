@@ -7,7 +7,23 @@
     padding: 8rem 0;
 
     .swiper-container {
-      width: 100%;
+      width: 80%;
+      margin-inline: auto;
+    }
+
+    &__slide {
+      pointer-events: auto;
+      visibility: visible;
+      backface-visibility: hidden;
+      transform-origin: 0 0;
+      z-index: 1;
+      transform-style: preserve-3d;
+      background-position: center;
+      background-size: cover;
+      display: block;
+      flex-shrink: 0;
+      position: relative;
+      transition-property: transform;
     }
 
     &__slide-fig,

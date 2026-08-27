@@ -301,6 +301,16 @@
       width: 100%;
       margin-top: 2.8rem;
     }
+
+    &__error {
+      color: color(red,base);
+      font-size: 1.4rem;
+      font-weight: $base-font-medium;
+      line-height: 100%;
+      letter-spacing: .05em;
+      display: block;
+      margin-top: 1.2rem;
+    }
   }
 
   @include pc {

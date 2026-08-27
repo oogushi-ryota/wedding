@@ -9,9 +9,18 @@
   @include pc {
     height: 100%;
     border-radius: 2rem;
-    box-shadow: 0px 0px 1.5rem .4rem rgba(255, 255, 255, 0.4);
     overflow-x: clip;
     overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    // SafariはWebKit特有のバグで、overflow+border-radiusの子要素にtransformが
+    // 使われていると角丸のクリップが効かないことがあるため、mask-imageで強制する
+    // ただしmask-imageは自身のbox-shadowも一緒に隠してしまうため、box-shadowは親要素(.l-main__wrap)側に移動している
+    -webkit-mask-image: -webkit-linear-gradient(#fff, #fff);
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   @include sp {

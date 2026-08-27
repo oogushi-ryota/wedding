@@ -9,6 +9,7 @@ import { setFooterHeight } from "./utils/footerHeightUtils.js";
 import { initAnchorSmoothScroll } from "./utils/scrollUtils.js";
 import { initFadeIn } from "./utils/fadeInUtils.js";
 import { initPostalCodeAutofill } from "./utils/postalCodeUtils.js";
+import { initCompanionsPersist } from "./utils/companionsPersistUtils.js";
 
 // vw単位のCSS変数（--vw）はvwp()/vws()が参照するため、描画前に早めにセットしておく
 setVw();
@@ -25,4 +26,5 @@ window.addEventListener('DOMContentLoaded', () => {
   initAnchorSmoothScroll();     // ← スムーススクロール
   initFadeIn();                  // ← スクロールフェードイン
   initPostalCodeAutofill();      // ← 郵便番号から住所自動入力
+  initCompanionsPersist();       // ← ご連名欄の値をバリデーションエラー後も保持
 });

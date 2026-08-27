@@ -1,4 +1,5 @@
-import Swiper, { Autoplay, EffectCube, Pagination } from 'swiper';
+import Swiper from 'swiper';
+import { Autoplay, EffectCube, Pagination } from 'swiper/modules';
 
 // ▼アルバムキューブスライダー
 export function initAlbumSlider(selector = '.js-album-slider') {
@@ -11,6 +12,7 @@ export function initAlbumSlider(selector = '.js-album-slider') {
     grabCursor: true,
     loop: true,
     speed: 1200,
+    initialSlide: 1,
     cubeEffect: {
       shadow: true,
       slideShadows: true,

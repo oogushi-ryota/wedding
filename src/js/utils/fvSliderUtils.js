@@ -1,4 +1,5 @@
-import Swiper, { Autoplay, EffectFade } from 'swiper';
+import Swiper from 'swiper';
+import { Autoplay, EffectFade } from 'swiper/modules';
 
 // ▼FVスライダー
 export function initFvSlider(selector = '.js-fv-slider') {
