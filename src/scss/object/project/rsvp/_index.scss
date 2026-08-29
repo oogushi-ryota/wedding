@@ -137,7 +137,6 @@
 
     &__input-txt,
     &__select {
-      font-size: 1.4rem;
       font-weight: $base-font-medium;
       line-height: 100%;
       letter-spacing: .05em;
@@ -314,10 +313,16 @@
   }
 
   @include pc {
-    
+    &__input-txt,
+    &__select {
+      font-size: 1.4rem;
+    }
   }
 
   @include sp {
-    
+    &__input-txt,
+    &__select {
+      font-size: 16px;
+    }
   }
 }
