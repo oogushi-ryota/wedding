@@ -26,5 +26,5 @@ window.addEventListener('DOMContentLoaded', () => {
   initAnchorSmoothScroll();     // ← スムーススクロール
   initFadeIn();                  // ← スクロールフェードイン
   initPostalCodeAutofill();      // ← 郵便番号から住所自動入力
-  initCompanionsPersist();       // ← ご連名欄の値をバリデーションエラー後も保持
+  initCompanionsPersist();       // ← お子様欄の値をバリデーションエラー後も保持
 });

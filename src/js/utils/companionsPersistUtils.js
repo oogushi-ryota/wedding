@@ -1,4 +1,4 @@
-// ▼「ご連名」欄の値をバリデーションエラー後も保持する
+// ▼「お子様」欄の値をバリデーションエラー後も保持する
 // tinyTemplate側は配列項目を入力画面の再表示で正しく復元できないため、
 // sessionStorageで補完する（送信直前に保存 → 次回ロード時に復元）
 export function initCompanionsPersist({
@@ -27,4 +27,4 @@ export function initCompanionsPersist({
     sessionStorage.setItem(storageKey, JSON.stringify(values));
   });
 }
-// ▲「ご連名」欄の値をバリデーションエラー後も保持する
+// ▲「お子様」欄の値をバリデーションエラー後も保持する
