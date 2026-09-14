@@ -80,6 +80,10 @@
       & + .p-rsvp__input-txt {
         margin-top: 1.2rem;
       }
+
+      & + & {
+        margin-top: 0;
+      }
     }
 
     &__required {
